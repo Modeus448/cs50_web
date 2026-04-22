@@ -22,3 +22,17 @@ for person in people: #зикл для перевірки місця для ко
         print(f"Added {person} to flaght successfully.")
     else:
         print(f"No available seats for {person}.")
+
+#Декоратори
+def announce(f): #створюємо декоратор, який приймає функцію як аргумент
+    def wrapper(): 
+        print("About to run the function...")
+        f()
+        print("Done with the function.")
+    return wrapper
+
+@announce
+def hello():
+    print("Helow world")
+
+hello()
