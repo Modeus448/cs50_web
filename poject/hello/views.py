@@ -1,5 +1,5 @@
 #Обираємо що баче користувач, який зайшов на сайт
-#Тута ми прописуємо файли які будуть показані і їхні назви в коді
+#Тута ми прописуємо файли які будуть показані і їхні назви в коді 
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -15,5 +15,6 @@ def names(request):
 
 
 def greet(request, name):
-    return HttpResponse(f"Hello, {name.capitalize()}!")
+    return render(request, "hello/greet.html", {
+        "name": name.capitalize()}) #Додаємо до html логіку, шаблоназацію і додаємо зміну
     #вивести на екран текст "Hello, {name}!", де {name} - це ім'я, яке ми передаємо в URL-адресі.

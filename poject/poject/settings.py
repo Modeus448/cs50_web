@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 # Програми Django, які будуть використовуватися в проекті.
 INSTALLED_APPS = [
     'hello',
+    'newyear',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
