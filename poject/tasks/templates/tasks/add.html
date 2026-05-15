@@ -1,13 +1,9 @@
-{$ load static $}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link href="{% static 'tasks.srtle.css' %}" rel="stylesheet">
-    <title>Add tasks</title>
-  </head>
-  <body>
-    <h1> Add task </h1>
-    <input type="text" name="task">
-    <input type="submit">
-  </body>
-</html>
+{% extends "tasks/leyot.html" %}
+
+{% block title %} Add task {% endblock %}
+{% block body %}
+  <h1> Add task </h1>
+  <input type="text" name="task">
+  <input type="submit"><br>
+  <a href="{% url 'index' %}"> Back </a>
+{% endblock %}

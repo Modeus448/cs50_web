@@ -1,0 +1,12 @@
+{% load static %}
+<!DOCTYE html>
+<html lang="en">
+  <head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+  </head>
+  <body>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>
