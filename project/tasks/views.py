@@ -16,7 +16,7 @@ def index(request):
 def add(request):
     #Перевірка на сервері
     if request.method == "POST":
-        form = NewTasksForm(request.POST) #створюємо екземпляр форми з даними, отриманими від користувача
+        form = NewTaskForm(request.POST) #створюємо екземпляр форми з даними, отриманими від користувача
         if form.is_valid(): #перевіряємо, чи дані є валідними
             task = form.cleaned_data #отримуємо дані з форми
             tasks.append(task) #додаємо нове завдання до списку завдань
